@@ -1,0 +1,107 @@
+name: overload_ai
+description: "Overload.ai - AI-powered gym workout tracker"
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.11.5
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # State management
+  flutter_riverpod: ^3.3.2
+
+  # Icons
+  cupertino_icons: ^1.0.8
+
+  # ---- Used from Part 3 onwards
+
+  # Firebase (Part 2 - Authentication)
+  firebase_core: ^4.6.0
+  firebase_auth: ^6.5.4
+  shared_preferences: ^2.5.5
+  cloud_firestore: ^6.6.0
+  google_sign_in: ^6.2.1
+
+  # Calendar UI (Additional Feature - Progress Calendar)
+  table_calendar: ^3.1.2
+
+  # Local notifications (Additional Feature - Rest Timer alerts)
+  flutter_local_notifications: ^22.0.1
+
+  # AI feature (Part 3 - Progressive Overload Architect, uses Gemini API)
+  http: ^1.2.2
+
+  # Charts (Part 3 - Analysis tab: Estimated 1RM line graph, Weekly Muscle
+  # Volume bar chart). Pure-Dart, no platform channels.
+  fl_chart: ^1.2.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  flutter_launcher_icons: ^0.14.4
+
+flutter_launcher_icons:
+  android: true
+  ios: false
+  image_path: "assets/images/app_icon.png"
+  adaptive_icon_background: "#000000"
+  adaptive_icon_foreground: "assets/images/app_icon_foreground.png"
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+
+  fonts:
+    - family: Montserrat
+      fonts:
+        - asset: assets/fonts/Montserrat-Thin.ttf
+          weight: 100
+        - asset: assets/fonts/Montserrat-ThinItalic.ttf
+          weight: 100
+          style: italic
+        - asset: assets/fonts/Montserrat-ExtraLight.ttf
+          weight: 200
+        - asset: assets/fonts/Montserrat-ExtraLightItalic.ttf
+          weight: 200
+          style: italic
+        - asset: assets/fonts/Montserrat-Light.ttf
+          weight: 300
+        - asset: assets/fonts/Montserrat-LightItalic.ttf
+          weight: 300
+          style: italic
+        - asset: assets/fonts/Montserrat-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Montserrat-Italic.ttf
+          weight: 400
+          style: italic
+        - asset: assets/fonts/Montserrat-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Montserrat-MediumItalic.ttf
+          weight: 500
+          style: italic
+        - asset: assets/fonts/Montserrat-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Montserrat-SemiBoldItalic.ttf
+          weight: 600
+          style: italic
+        - asset: assets/fonts/Montserrat-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Montserrat-BoldItalic.ttf
+          weight: 700
+          style: italic
+        - asset: assets/fonts/Montserrat-ExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/Montserrat-ExtraBoldItalic.ttf
+          weight: 800
+          style: italic
+        - asset: assets/fonts/Montserrat-Black.ttf
+          weight: 900
+        - asset: assets/fonts/Montserrat-BlackItalic.ttf
+          weight: 900
+          style: italic
