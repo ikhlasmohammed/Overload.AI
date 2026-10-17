@@ -1,10 +1,10 @@
-/// Deterministic math for the "Progressive Overload Architect" feature.
-///
-/// Deliberately contains ZERO calls to Groq. The 1RM estimate and the next
-/// session's target weight/reps are always computed here in plain Dart, so
-/// they're guaranteed correct even if the AI call fails or is rate-limited.
-/// Groq's only job (see GroqService) is to phrase a sentence explaining a
-/// number this file already decided.
+// Deterministic math for the "Progressive Overload Architect" feature.
+//
+// Deliberately contains ZERO calls to Groq. The 1RM estimate and the next
+// session's target weight/reps are always computed here in plain Dart, so
+// they're guaranteed correct even if the AI call fails or is rate-limited.
+// Groq's only job (see GroqService) is to phrase a sentence explaining a
+// number this file already decided.
 
 /// Epley formula: estimated 1-rep max from a single logged set.
 /// 1RM = weight x (1 + reps / 30)
@@ -59,6 +59,6 @@ ProgressionSuggestion suggestNext(double lastWeight, int lastReps) {
     suggestedWeight: lastWeight,
     suggestedReps: lastReps + 1,
     triggerReason:
-          'you are still building reps at this weight, so aim for one more rep this session',
+        'you are still building reps at this weight, so aim for one more rep this session',
   );
 }
